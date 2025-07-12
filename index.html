@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explora el DOM</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <style>
+    .hero {
+      background-image: url('img/Fusionweb.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- HEADER -->
+<nav class="bg-indigo-900 text-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">FUSION WEB®</h1>
+    <ul class="flex space-x-4 text-sm">
+      <li><a href="#about" class="hover:text-yellow-300">About Us</a></li>
+      <li><a href="#definition" class="hover:text-yellow-300">Definition</a></li>
+      <li><a href="#characteristics" class="hover:text-yellow-300">Characteristics</a></li>
+      <li><a href="#objectives" class="hover:text-yellow-300">Objectives</a></li>
+      <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO CON SLIDER -->
+<section class="relative h-80 md:h-96">
+
+  <!-- Carousel wrapper -->
+  <div id="hero-carousel" class="relative w-full h-full" data-carousel="slide">
+    
+    <!-- Carousel items -->
+    <div class="relative h-full overflow-hidden rounded-lg">
+      <!-- Slide 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <img src="img/Fusionweb.jpg" class="absolute block w-full h-full object-cover" alt="DOM Slide 1">
+      </div>
+      <!-- Slide 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="img/Fusionweb2.jpg" class="absolute block w-full h-full object-cover" alt="DOM Slide 2">
+      </div>
+      <!-- Slide 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="img/Fusionweb3.jpg" class="absolute block w-full h-full object-cover" alt="DOM Slide 3">
+      </div>
+    </div>
+
+    <!-- Flechas de navegación -->
+    <button type="button" class="absolute top-1/2 left-0 z-30 flex items-center justify-center h-10 w-10 -translate-y-1/2 bg-gray-800/50 text-white rounded-full hover:bg-gray-800" data-carousel-prev>
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button type="button" class="absolute top-1/2 right-0 z-30 flex items-center justify-center h-10 w-10 -translate-y-1/2 bg-gray-800/50 text-white rounded-full hover:bg-gray-800" data-carousel-next>
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</section>
+
+<br>
+
+  <section id="about" class="py-16 px-6 bg-gray-100">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+
+    <!-- COLUMNA DE TEXTO -->
+    <div>
+      <h2 class="text-3xl font-bold text-indigo-800 mb-4">About Us</h2>
+      <p class="text-lg text-gray-700">
+        FUSION WEB® was founded in 2005 with one goal in mind: "to meet the evolving needs of companies to improve their processes, monitor their business, analyze information, and make timely and appropriate decisions."
+      </p>
+    </div>
+
+    <!-- COLUMNA DE IMAGEN -->
+    <div>
+      <img src="img/Aboutus.jpg" alt="About Us" class="w-full h-auto rounded-lg shadow-md object-cover" />
+    </div>
+
+  </div>
+</section>
+
+<br>
+
+<!-- DEFINITION -->
+<section id="definition" class="py-16 px-6 bg-gray-100">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+
+    <!-- IMAGEN A LA IZQUIERDA -->
+    <div>
+      <img src="img/Definition.jpg" alt="Estructura del DOM" class="w-full h-auto rounded-lg shadow-lg object-cover" />
+    </div>
+
+    <!-- TEXTO A LA DERECHA -->
+    <div>
+      <h2 class="text-3xl font-bold text-indigo-800 mb-4">Definition</h2>
+      <p class="text-lg text-gray-700">
+        The document object in JavaScript is the browser's main object that represents the entire web page. It allows you to access and modify HTML elements using properties and methods (Escarcena, 2020).
+        <br><br>
+        The DOM structure is hierarchical: <br>
+        *Elements (div, h1, p) are nodes. <br>
+        *The content within them is a text node. <br>
+        *Each node has relationships: parent, child, and siblings.        
+      </p>
+    </div>
+  </div>
+</section>
+  
+<br>
+
+  <!-- CHARACTERISTICS -->
+  <section id="characteristics" class="py-16 px-6 bg-gray-100">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-indigo-800 mb-4">Characteristics</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow border-l-4 border-indigo-500">
+          <h3 class="text-xl font-semibold mb-2">Full access to the web page</h3>
+          <p class="text-gray-600">You can read, modify, or add content using JavaScript.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow border-l-4 border-indigo-500">
+          <h3 class="text-xl font-semibold mb-2">Element selection methods</h3>
+          <p class="text-gray-600">getElementById(), getElementsByTagName(), getElementsByName().</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow border-l-4 border-indigo-500">
+          <h3 class="text-xl font-semibold mb-2">Tree-like structure</h3>
+          <p class="text-gray-600">The DOM organizes elements as nodes in a parent-child hierarchy.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow border-l-4 border-indigo-500">
+          <h3 class="text-xl font-semibold mb-2">Content modification</h3>
+          <p class="text-gray-600">Use innerHTML, setAttribute(), or .style to change elements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+  
+<!-- OBJECTIVES -->
+<section id="objectives" class="py-16 px-6 bg-white">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-indigo-800 mb-4">Objectives</h2>
+    <p class="text-lg text-gray-700 mb-10">
+      The DOM enables developers to create more dynamic, interactive, and accessible web applications. Its objective is to give full control over how web documents are structured and manipulated.
+    </p>
+
+    <!-- SLIDER -->
+    <div id="dom-carousel" class="relative w-full" data-carousel="slide">
+      <!-- Slides -->
+      <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        <!-- Slide 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="img/Obj1.jpg" class="absolute block w-full h-full object-cover" alt="DOM Obj1">
+        </div>
+        <!-- Slide 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="img/Obj2.jpg" class="absolute block w-full h-full object-cover" alt="DOM Obj2">
+        </div>
+        <!-- Slide 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="img/Obj3.jpg" class="absolute block w-full h-full object-cover" alt="DOM Obj3">
+        </div>
+      </div>
+
+      <!-- Slider controls -->
+      <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </span>
+      </button>
+      <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<br>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16 px-6 bg-gray-100">
+  <div class="max-w-5xl mx-auto text-center" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold text-indigo-800 mb-4">Contact</h2>
+    <p class="text-lg text-gray-700 mb-4">
+      Have questions about the DOM or our platform? Contact us at:
+    </p>
+    <p class="text-lg font-semibold text-indigo-700">contact@fusionweb.com</p>
+    <a href="mailto:contact@fusionweb.com" class="inline-block mt-4 px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">
+      Send Email
+    </a>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section id="references" class="py-8 px-6 bg-white text-center">
+  <h2 class="text-3xl font-bold text-indigo-800 mb-4">Bibliography</h2>
+  <p class="text-gray-700 text-sm">
+    Escarcena, M. (2020). Programación páginas Web: JavaScript y PHP: (1 ed.). RA-MA Editorial. https://elibro.net/es/lc/itsqmet/titulos/222656
+  </p>
+</section>
+
+<!-- FOOTER -->
+  <footer class="bg-indigo-900 text-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm">
+      While some suffer for love, I suffer because it doesn't work...
+    </div>
+  </footer>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
